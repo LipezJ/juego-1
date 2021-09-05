@@ -1,0 +1,17 @@
+body{
+    margin: 0px;
+}
+#cielo{
+    background-color: aquamarine;
+    width: 100%;
+}
+#piso{
+    background-color: chartreuse;
+    width: 100%;
+}
+#player{
+    background-image: url(img/mario.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: absolute;
+}
