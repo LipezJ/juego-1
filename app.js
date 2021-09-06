@@ -7,6 +7,20 @@ var key
 var stilo 
 var Maxwi
 var Maxhe
+var salto
+var salto11
+var salto22
+var salto33
+var salto15
+var salto25
+var salto35
+var caida1
+var caida15
+var caida2
+var caida25
+var caida3
+var caida35
+var Csalto
 
 /* Funcion de movimientos */
 
@@ -53,28 +67,99 @@ function move(event){
         }
 
     }
-    if (key == 40) {
 
-        if (move2 < Maxhe) {
+    /* Salto */
 
-            move2 = move2 + maxw  
-            stilo = move2.toString() + "px"
-            document.getElementById('player').style.marginTop = stilo
-            
-        }
+    Csalto = 7
+
+    function salto1() {
+
+        salto11 = screen2 / Csalto
+        salto11 = salto11 / 3
+        salto15 = maxw * 5
+        salto15 = salto15 + salto11
+        //console.log("1", salto15)
+        salto15 = salto15.toString() + "px"
+        document.getElementById('player').style.marginTop = salto15
 
     }
+
+    function salto2() {
+    
+        salto22 = screen2 / Csalto
+        salto22 = salto22 / 3
+        salto22 = salto22 * 3
+        salto25 = maxw * 5
+        salto25 = salto25 + salto22
+        //console.log("2", salto25)
+        salto25 = salto25.toString() + "px"
+        document.getElementById('player').style.marginTop = salto25
+
+    }
+    function salto3() {
+
+        salto33 = screen2 / Csalto
+        salto33 = salto33 / 2.5
+        salto33 = salto33 * 5
+        salto35 = maxw * 5
+        salto35 = salto35 + salto33
+        //console.log("3", salto35)
+        salto35 = salto35.toString() + "px"
+        document.getElementById('player').style.marginTop = salto35
+
+    }
+
+    /* Caida */
+
+    function caidao() {
+        
+        caida1 = screen2 / Csalto
+        caida1 = caida1 / 1.5
+        caida15 = maxw * 5
+        caida15 = caida15 + caida1
+        //console.log("1c", caida15)
+        caida15 = caida15.toString() + "px"
+        document.getElementById('player').style.marginTop = caida15
+        
+    }
+
+    function caidai() {
+
+        caida2 = caida1 * 2
+        caida25 = maxw * 5
+        caida25 = caida25 + caida2
+        //console.log("2c", caida25)
+        caida25 = caida25.toString() + "px"
+        document.getElementById('player').style.marginTop = caida25
+        
+    }
+    function caidau() {
+        
+        caida3 = caida1 * 3
+        caida35 = maxw * 5
+        caida35 = caida35 + caida3
+        //console.log("3c", caida35)
+        caida35 = caida35.toString() + "px"
+        document.getElementById('player').style.marginTop = caida35
+
+    }
+    
+    move2 = document.getElementById('player').style.marginTop
+
+    /* Invocacion */
+
     if (key == 38) {
+     
+        setTimeout(salto3, 50)
+        setTimeout(salto2, 100)
+        setTimeout(salto1, 150)
 
-        if (move2 > 1) {
-
-            move2 = move2 - maxw  
-            stilo = move2.toString() + "px"
-            document.getElementById('player').style.marginTop = stilo
-
-        }else{
-            document.getElementById('player').style.marginTop = "0px"
-        }
-
+        setTimeout(caidao, 300)
+        setTimeout(caidai, 350)
+        setTimeout(caidau, 400)
+    }
+    
+    if (key == 38) {
+        
     }
 }

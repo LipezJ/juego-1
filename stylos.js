@@ -10,6 +10,7 @@ var maxw
 var maxw1
 var maxh 
 var maxh1
+var mart
 
 /* Obtencion de datos de la pantalla */
 
@@ -29,14 +30,14 @@ if (screen2 >= 500) {
     cte = maxw * 7
     tre = (screen1 - cte) + maxw
     cte = cte - maxw
-    console.log("xd")
+    //console.log("xd")
 }
 
 if (screen2 >= 300 && screen2 <= 500) {
     cte = maxw * 8
     tre = (screen1 - cte) 
     cte = cte 
-    console.log("xd2")
+    //console.log("xd2")
 }
 
 if (screen1 >= 600) {
@@ -44,7 +45,7 @@ if (screen1 >= 600) {
     cte = maxw * 6
     tre = (screen1 - cte) + maxw
     cte = cte - maxw
-    console.log("xd3")
+    //console.log("xd3")
 
 }
 
@@ -53,7 +54,7 @@ if (screen2 >= 500) {
     cte = maxw * 6
     tre = (screen1 - cte) + maxw
     cte = cte - maxw
-    console.log("xd4")
+    //console.log("xd4")
 }
 
 if (screen2 < 300) {
@@ -61,16 +62,16 @@ if (screen2 < 300) {
     cte = maxw * 13
     tre = (screen1 - cte) + maxw
     cte = cte - maxw
-    console.log("xd5")
+    //console.log("xd5")
 
 }
 
 if (screen2 >= 360) {
 
-    cte = maxw * 8
-    tre = (screen1 - cte) + maxw
-    cte = cte - maxw
-    console.log("xd6")
+    cte = maxw * 10
+    tre = (screen1 - cte) + (maxw * 2)
+    cte = cte - (maxw * 2)
+    //console.log("xd6")
 
 }
 
@@ -78,7 +79,7 @@ if (screen1 > 665 && screen2 < 400) {
     cte = maxw * 9
     tre = (screen1 - cte) + maxw
     cte = cte - maxw
-    console.log("xd7")
+    //console.log("xd7")
 }
 
 if (screen2 > 720 && screen1 > 1000) {
@@ -86,7 +87,7 @@ if (screen2 > 720 && screen1 > 1000) {
     cte = maxw * 10
     tre = (screen1 - cte) + (maxw * 2)
     cte = cte - (maxw * 2)
-    console.log("xd8")
+    //console.log("xd8")
 
 }
 
@@ -94,16 +95,28 @@ if (screen2 > 800) {
     cte = maxw * 9
     tre = (screen1 - cte) + (maxw * 3)
     cte = cte - (maxw * 3)
-    console.log("xd9")
+    //console.log("xd9")
 }
 
-if (screen2 > 500 && screen1 > 700 && screen1 < 1000) {
+if (screen2 > 500 && screen1 > 700 && screen1 < 1000 && screen2 < 1300) {
     cte = maxw * 7
     tre = (screen1 - cte) + maxw
     cte = cte - maxw
-    console.log("xd10")
+    //console.log("xd10")
 }
 
+if (screen2 > 1000 && screen1 > 1300 ) {
+    cte = maxw * 9
+    tre = (screen1 - cte) + maxw
+    cte = cte - maxw
+    //console.log("xd11")
+}
+
+    /* Margen superior */
+mart = cte - maxw 
+mart = mart.toString() + "px"
+
+    /* covertidor a valores aptos para style */
 cte = cte.toString() + "px"
 tre = tre.toString() + "px"
 
@@ -112,6 +125,7 @@ tre = tre.toString() + "px"
 
 function sty(){
 
+    document.getElementById('player').style.marginTop = mart
     document.getElementById('player').style.height = maxw1
     document.getElementById('player').style.width = maxw1
 
